@@ -4,7 +4,7 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
-import { ToDo } from 'src/app/models/todo.model';
+import { Column, ToDo } from 'src/app/models/todo.model';
 
 @Component({
   selector: 'app-board',
@@ -24,28 +24,42 @@ import { ToDo } from 'src/app/models/todo.model';
   ],
 })
 export class BoardComponent implements OnInit {
-  todos: ToDo[] = [
+  columns: Column[] = [
     {
-      id: '1',
-      title: 'Exercise',
+      title: 'To do',
+      todos: [
+        {
+          id: '1',
+          title: 'Exercise',
+        },
+        {
+          id: '2',
+          title: 'Learn English',
+        },
+      ],
     },
     {
-      id: '2',
-      title: 'Learn English',
+      title: 'Doing',
+      todos: [
+        {
+          id: '3',
+          title: 'Learn Angular',
+        },
+      ],
+    },
+    {
+      title: 'Done',
+      todos: [
+        {
+          id: '4',
+          title: 'Read a book',
+        },
+      ],
     },
   ];
-  doing: ToDo[] = [
-    {
-      id: '3',
-      title: 'Learn Angular',
-    },
-  ];
-  done: ToDo[] = [
-    {
-      id: '4',
-      title: 'Read a book',
-    },
-  ];
+  todos: ToDo[] = [];
+  doing: ToDo[] = [];
+  done: ToDo[] = [];
   constructor() {}
 
   ngOnInit(): void {}
@@ -66,5 +80,12 @@ export class BoardComponent implements OnInit {
         event.currentIndex
       );
     }
+  }
+
+  addColumn() {
+    this.columns.push({
+      title: 'New Column',
+      todos: [],
+    });
   }
 }

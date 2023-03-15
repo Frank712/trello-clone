@@ -18,6 +18,7 @@ import { TableComponent } from './pages/table/table.component';
 import { CdkTableModule } from '@angular/cdk/table';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BoardComponent,
     TodoDialogComponent,
     TableComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,

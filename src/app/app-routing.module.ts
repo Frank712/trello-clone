@@ -4,11 +4,16 @@ import { LoginComponent } from './pages/login/login.component';
 import { BoardsComponent } from './pages/boards/boards.component';
 import { BoardComponent } from './pages/board/board.component';
 import { TableComponent } from './pages/table/table.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'forgot-password',
+    component: ForgotPasswordComponent,
   },
   {
     path: 'boards',

@@ -19,6 +19,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     TodoDialogComponent,
     TableComponent,
     ForgotPasswordComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
